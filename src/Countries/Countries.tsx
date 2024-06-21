@@ -17,7 +17,7 @@ const Countries = () => {
     }, [fetchCountries]);
 
     return (
-        <div className="overflow-auto scrollbar-custom border border-primary rounded-start shadow-lg" style={{ maxHeight: "600px" }}>
+        <div className="overflow-auto scrollbar-custom border border-primary rounded-start shadow-lg" style={{ maxHeight: "600px", width: "1100px" }}>
             {countries.map((country, index) => (
                 <Country key={index} countryName={country.name} alpha3Code={country.alpha3Code} />
             ))}
