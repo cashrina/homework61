@@ -36,19 +36,21 @@ const Country: React.FC<CountryProps> = ({ countryName, alpha3Code }) => {
     };
 
     return (
-        <div className="border">
+        <div>
             <button className="btn" onClick={countryClick}>
                 {countryName}
             </button>
-            {showCountryInfo && countryOne && (
-                <CountryInfo
-                    country_name={countryOne.name}
-                    country_capital={countryOne.capital}
-                    country_population={countryOne.population}
-                    country_flag={countryOne.flag}
-                    country_borders={countryOne.borders}
-                />
-            )}
+            <div>
+                {showCountryInfo && countryOne && (
+                    <CountryInfo
+                        country_name={countryOne.name}
+                        country_capital={countryOne.capital}
+                        country_population={countryOne.population}
+                        country_flag={countryOne.flag}
+                        country_borders={countryOne.borders}
+                    />
+                )}
+            </div>
         </div>
     );
 };
